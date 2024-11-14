@@ -3,13 +3,12 @@ import { ThemeProvider } from '@emotion/react'
 
 const theme = createTheme({
     palette: {
-      mode: 'dark',
+      mode: 'light',
       background: {
         default: '#121212',
         paper: '#1b1b1b',
       },
       text: {
-        primary: 'default', 
         secondary: '#b85a5e',
       },
       primary: {

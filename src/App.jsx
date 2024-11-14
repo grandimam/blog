@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import { About } from './components/About';
 import { Header } from "./components/Header"
 import ThemeProviderWrapper from './ThemeContext'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -21,8 +20,7 @@ function App() {
       <Router>
         <AppContent />
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/posts" element={<Post />} />
+          <Route path="/stories" element={<Post />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>

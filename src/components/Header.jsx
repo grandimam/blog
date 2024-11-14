@@ -19,7 +19,6 @@ export function Header() {
                 GRANDIMAM
             </Typography>
             <Tabs value={value} onChange={handleChange}>
-                <Tab value="about" label="About" component={Link} to="/about" sx={{ fontWeight: "bold", fontSize: "1rem" }} />
                 <Tab value="posts" label="posts" component={Link} to="/posts" sx={{ fontWeight: "bold", fontSize: "1rem" }} />
                 <Tab value="contact" label="Contact" component={Link} to="/contact" sx={{ fontWeight: "bold", fontSize: "1rem" }} />
             </Tabs>
