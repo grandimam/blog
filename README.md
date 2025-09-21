@@ -1,16 +1,13 @@
-## Hi there 👋
+👋 Hi
 
-<!--
-**grandimam/grandimam** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I love building **data-intelligence platforms** — systems that fetch messy data, enrich it with AI/LLMs, and deliver insights through APIs and apps.  
 
-Here are some ideas to get you started:
+🔎 My focus:  
+- **Data acquisition** → crawlers, connectors, pipelines  
+- **Data enrichment** → classification, recommendations, LLM + embeddings  
+- **Intelligence delivery** → low-latency backends, search, dashboards, APIs  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+⚡ What I enjoy most:  
+- Turning unstructured data into **actionable intelligence**  
+- Building **intelligent websites & platforms** (ads, e-commerce, property, cloud security)  
+- Exploring how **LLMs** power the next generation of intelligent systems  
