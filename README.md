@@ -1,6 +1,6 @@
 👋 Hi
 
-I love building **data-intelligence platforms** — systems that fetch messy data, enrich it with AI/LLMs, and deliver insights through APIs and apps.  
+I build data-intelligence platforms — products that fetch messy data, enrich it with AI/LLMs, and expose insights via scalable APIs and apps 
 
 🔎 My focus:  
 - **Data acquisition** → crawlers, connectors, pipelines  
