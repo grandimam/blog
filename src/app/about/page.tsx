@@ -4,19 +4,18 @@ import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Grandimam - Data Intelligence & AI Engineer",
-  description:
-    "Learn about Grandimam's expertise in building data-intelligence platforms, AI integration, and scalable systems. Focus on data acquisition, enrichment, and intelligence delivery.",
+  title: "About | Grandimam",
+  description: "I identify what needs to be done and get it done",
   openGraph: {
-    title: "About Grandimam - Data Intelligence Expert",
+    title: "About Grandimam",
     description:
-      "Expert in building data-intelligence platforms, AI integration, and scalable systems.",
-    url: "https://grandimam.dev/about",
+      "I identify what needs to be done and get it done. Building meaningful solutions for the Muslim community with a focus on collective security and institutional responsibility.",
+    url: "https://grandimam.net/about",
   },
   twitter: {
-    title: "About Grandimam - Data Intelligence Expert",
+    title: "About Grandimam",
     description:
-      "Expert in building data-intelligence platforms, AI integration, and scalable systems.",
+      "I identify what needs to be done and get it done. Building meaningful solutions for the Muslim community with a focus on collective security and institutional responsibility.",
   },
 };
 

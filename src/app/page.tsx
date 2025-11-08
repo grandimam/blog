@@ -4,6 +4,24 @@ import { BlogCard } from "@/components/BlogCard";
 import { Footer } from "@/components/Footer";
 import { blogPosts } from "@/data/posts";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Grandimam - Posts & Thoughts",
+  description:
+    "Thoughts on building meaningful solutions, collective security, and technology that serves community needs. JavaScript, Express, and purposeful development.",
+  openGraph: {
+    title: "Grandimam - Posts & Thoughts",
+    description:
+      "Thoughts on building meaningful solutions, collective security, and technology that serves community needs.",
+    url: "https://grandimam.net",
+  },
+  twitter: {
+    title: "Grandimam - Posts & Thoughts",
+    description:
+      "Thoughts on building meaningful solutions, collective security, and technology that serves community needs.",
+  },
+};
 
 interface HomePageProps {
   searchParams: Promise<{ page?: string }>;
