@@ -6,11 +6,12 @@ import { blogPosts } from "@/data/posts";
 import Link from "next/link";
 
 interface HomePageProps {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }
 
-export default function HomePage({ searchParams }: HomePageProps) {
-  const currentPage = Number(searchParams.page) || 1;
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const params = await searchParams;
+  const currentPage = Number(params.page) || 1;
   const postsPerPage = 3;
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;

@@ -77,13 +77,13 @@ export default function BooksPage() {
       <div style={{ display: 'flex', gap: '24px' }}>
         <Sidebar currentPage="books" />
         
-        <main className="mobile-main" style={{ flex: 1 }}>
-          <div style={{ fontSize: '14px', lineHeight: '1.5', color: '#000' }}>
+        <main className="mobile-main" style={{ flex: 1, paddingTop: "24px" }}>
+          <div style={{ fontSize: '16px', lineHeight: '1.5', color: '#000' }}>
             
             {/* Currently Reading */}
             <section style={{ marginBottom: '32px' }}>
               <h2 style={{ 
-                fontSize: '16px', 
+                fontSize: '18px', 
                 fontWeight: '500', 
                 margin: '0 0 16px 0',
                 color: '#000'
@@ -97,7 +97,7 @@ export default function BooksPage() {
                     {book.title}
                   </div>
                   <div style={{ 
-                    fontSize: '12px', 
+                    fontSize: '14px', 
                     color: '#828282',
                     marginTop: '2px'
                   }}>
@@ -110,7 +110,7 @@ export default function BooksPage() {
             {/* Recently Finished */}
             <section>
               <h2 style={{ 
-                fontSize: '16px', 
+                fontSize: '18px', 
                 fontWeight: '500', 
                 margin: '0 0 16px 0',
                 color: '#000'
@@ -124,7 +124,7 @@ export default function BooksPage() {
                     {book.title}
                   </div>
                   <div style={{ 
-                    fontSize: '12px', 
+                    fontSize: '14px', 
                     color: '#828282',
                     marginTop: '2px'
                   }}>

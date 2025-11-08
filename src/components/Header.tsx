@@ -16,7 +16,16 @@ export function Header({ breadcrumb }: HeaderProps) {
         overflow: 'hidden',
         textOverflow: 'ellipsis'
       }}>
-        ~ / <a href="/" style={{ color: '#828282', textDecoration: 'none' }}>grandimam</a>{breadcrumb ? ` / ${breadcrumb}` : ''}
+        ~ / <a 
+          href="/" 
+          style={{ 
+            color: breadcrumb ? '#000' : '#828282', 
+            textDecoration: 'none',
+            fontWeight: breadcrumb ? '500' : 'normal'
+          }}
+        >
+          grandimam
+        </a>{breadcrumb ? ` / ${breadcrumb}` : ''}
       </div>
     </div>
   );
