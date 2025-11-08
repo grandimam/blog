@@ -1,12 +1,13 @@
 interface SidebarProps {
-  currentPage?: 'posts' | 'books' | 'about';
+  currentPage?: 'posts' | 'books' | 'about' | 'contact';
 }
 
 export function Sidebar({ currentPage = 'posts' }: SidebarProps) {
   const navItems = [
     { id: 'posts', label: 'posts', href: '/' },
     { id: 'books', label: 'books', href: '/books' },
-    { id: 'about', label: 'about', href: '/about' }
+    { id: 'about', label: 'about', href: '/about' },
+    { id: 'contact', label: 'contact', href: '/contact' }
   ];
 
   return (

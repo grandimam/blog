@@ -1,13 +1,14 @@
 interface HeaderProps {
   breadcrumb?: string;
-  currentPage?: 'posts' | 'books' | 'about';
+  currentPage?: 'posts' | 'books' | 'about' | 'contact';
 }
 
 export function Header({ breadcrumb, currentPage = 'posts' }: HeaderProps) {
   const navItems = [
     { id: 'posts', label: 'posts', href: '/' },
     { id: 'books', label: 'books', href: '/books' },
-    { id: 'about', label: 'about', href: '/about' }
+    { id: 'about', label: 'about', href: '/about' },
+    { id: 'contact', label: 'contact', href: '/contact' }
   ];
 
   return (

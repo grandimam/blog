@@ -5,9 +5,9 @@ import { blogPosts } from "@/data/posts";
 import { notFound } from "next/navigation";
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const postContent = {
@@ -68,8 +68,9 @@ Always implement fallback mechanisms and monitor token usage closely. Cost optim
   `,
 };
 
-export default function PostPage({ params }: PostPageProps) {
-  const currentPostIndex = blogPosts.findIndex((p) => p.slug === params.slug);
+export default async function PostPage({ params }: PostPageProps) {
+  const { slug } = await params;
+  const currentPostIndex = blogPosts.findIndex((p) => p.slug === slug);
   const post = blogPosts[currentPostIndex];
 
   if (!post) {
