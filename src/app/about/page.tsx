@@ -39,46 +39,9 @@ export default function AboutPage() {
         <main className="mobile-main" style={{ flex: 1, paddingTop: "24px" }}>
           <div style={{ fontSize: "16px", lineHeight: "1.5", color: "#000" }}>
             <p style={{ margin: "0 0 16px 0" }}>
-              I identify what needs to be done and get it done.
+              When there's a goal to achieve, I’m skilled at finding the right
+              resources, creating an effective plan, and making it happen.
             </p>
-
-            <section style={{ margin: "32px 0", padding: "20px 0" }}>
-              <h2
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  margin: "0 0 20px 0",
-                  color: "#000",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                What Drives Me
-              </h2>
-
-              <div
-                style={{
-                  fontSize: "17px",
-                  lineHeight: "1.75",
-                  color: "#1a1a1a",
-                }}
-              >
-                <p style={{ margin: "0 0 18px 0" }}>
-                  At the core of my ideology is a belief in collective security
-                  and the moral obligation that institutions exist to protect
-                  its people.
-                </p>
-
-                <p style={{ margin: "0 0 18px 0" }}>
-                  Not merely to govern, compete, or profit.
-                </p>
-
-                <p style={{ margin: "0" }}>
-                  I reject libertarian emphasis on autonomy and market freedom,
-                  and instead uphold the duty of institutions to safeguard and
-                  uplift those within their care.
-                </p>
-              </div>
-            </section>
           </div>
         </main>
       </div>
