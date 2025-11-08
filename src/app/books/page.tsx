@@ -23,44 +23,102 @@ interface Book {
   status: 'reading' | 'finished';
   progress?: number;
   finishedDate?: string;
+  category: string;
+  impact?: string;
 }
 
 const books: Book[] = [
+  // Technology & Craft
+  {
+    title: 'The Soul of a New Machine',
+    author: 'Tracy Kidder',
+    status: 'finished',
+    finishedDate: 'Dec 2024',
+    category: 'Technology',
+    impact: 'Deeply impacted me'
+  },
   {
     title: 'The Design of Everyday Things',
     author: 'Don Norman',
     status: 'reading',
-    progress: 60
+    progress: 60,
+    category: 'Technology'
   },
+  {
+    title: 'The Pragmatic Programmer',
+    author: 'David Thomas & Andrew Hunt',
+    status: 'finished',
+    finishedDate: 'Nov 2024',
+    category: 'Technology'
+  },
+  
+  // Systems & Architecture
   {
     title: 'Designing Data-Intensive Applications',
     author: 'Martin Kleppmann',
     status: 'reading',
-    progress: 35
+    progress: 35,
+    category: 'Systems'
   },
   {
     title: 'Building Microservices',
     author: 'Sam Newman',
     status: 'finished',
-    finishedDate: 'Oct 2024'
+    finishedDate: 'Oct 2024',
+    category: 'Systems'
   },
   {
     title: 'Clean Architecture',
     author: 'Robert Martin',
     status: 'finished',
-    finishedDate: 'Sep 2024'
+    finishedDate: 'Sep 2024',
+    category: 'Systems'
+  },
+  
+  // Purpose & Leadership
+  {
+    title: 'Start with Why',
+    author: 'Simon Sinek',
+    status: 'finished',
+    finishedDate: 'Aug 2024',
+    category: 'Purpose'
   },
   {
-    title: 'System Design Interview',
-    author: 'Alex Xu',
-    status: 'finished',
-    finishedDate: 'Aug 2024'
+    title: 'The Righteous Mind',
+    author: 'Jonathan Haidt',
+    status: 'reading',
+    progress: 25,
+    category: 'Purpose'
   }
 ];
 
 export default function BooksPage() {
-  const currentlyReading = books.filter(book => book.status === 'reading');
-  const finished = books.filter(book => book.status === 'finished');
+  const categories = ['Technology', 'Systems', 'Purpose'];
+  
+  const renderBook = (book: Book, index: number) => (
+    <div key={index} style={{ margin: '12px 0' }}>
+      <div style={{ fontWeight: '500', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        {book.title}
+        {book.impact && (
+          <span style={{ 
+            fontSize: '12px', 
+            color: '#666',
+            fontWeight: 'normal',
+            fontStyle: 'italic'
+          }}>
+            — {book.impact}
+          </span>
+        )}
+      </div>
+      <div style={{ 
+        fontSize: '14px', 
+        color: '#828282',
+        marginTop: '2px'
+      }}>
+        {book.author} • {book.status === 'reading' ? `${book.progress}% complete` : book.finishedDate}
+      </div>
+    </div>
+  );
 
   return (
     <div 
@@ -80,59 +138,24 @@ export default function BooksPage() {
         <main className="mobile-main" style={{ flex: 1, paddingTop: "24px" }}>
           <div style={{ fontSize: '16px', lineHeight: '1.5', color: '#000' }}>
             
-            {/* Currently Reading */}
-            <section style={{ marginBottom: '32px' }}>
-              <h2 style={{ 
-                fontSize: '18px', 
-                fontWeight: '500', 
-                margin: '0 0 16px 0',
-                color: '#000'
-              }}>
-                Currently Reading
-              </h2>
+            {categories.map((category, categoryIndex) => {
+              const categoryBooks = books.filter(book => book.category === category);
               
-              {currentlyReading.map((book, index) => (
-                <div key={index} style={{ margin: '12px 0' }}>
-                  <div style={{ fontWeight: '500' }}>
-                    {book.title}
-                  </div>
-                  <div style={{ 
-                    fontSize: '14px', 
-                    color: '#828282',
-                    marginTop: '2px'
+              return (
+                <section key={category} style={{ marginBottom: categoryIndex < categories.length - 1 ? '32px' : '0' }}>
+                  <h2 style={{ 
+                    fontSize: '18px', 
+                    fontWeight: '500', 
+                    margin: '0 0 16px 0',
+                    color: '#000'
                   }}>
-                    {book.author} • {book.progress}% complete
-                  </div>
-                </div>
-              ))}
-            </section>
-
-            {/* Recently Finished */}
-            <section>
-              <h2 style={{ 
-                fontSize: '18px', 
-                fontWeight: '500', 
-                margin: '0 0 16px 0',
-                color: '#000'
-              }}>
-                Recently Finished
-              </h2>
-              
-              {finished.map((book, index) => (
-                <div key={index} style={{ margin: '12px 0' }}>
-                  <div style={{ fontWeight: '500' }}>
-                    {book.title}
-                  </div>
-                  <div style={{ 
-                    fontSize: '14px', 
-                    color: '#828282',
-                    marginTop: '2px'
-                  }}>
-                    {book.author} • {book.finishedDate}
-                  </div>
-                </div>
-              ))}
-            </section>
+                    {category}
+                  </h2>
+                  
+                  {categoryBooks.map((book, index) => renderBook(book, index))}
+                </section>
+              );
+            })}
             
           </div>
         </main>
