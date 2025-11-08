@@ -16,6 +16,14 @@ export function Footer() {
         }}
       >
         © 2025 GRANDIMAM
+        <div style={{ 
+          fontSize: "9px", 
+          color: "#999", 
+          marginTop: "4px",
+          fontStyle: "italic"
+        }}>
+          Personal thoughts and opinions
+        </div>
       </div>
     </footer>
   );
