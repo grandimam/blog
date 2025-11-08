@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Grandimam" }],
   creator: "Grandimam",
+  icons: {
+    icon: [{ url: "/favicon.png", sizes: "any", type: "image/png" }],
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Grandimam",
     description:
@@ -32,13 +36,22 @@ export const metadata: Metadata = {
     siteName: "Grandimam",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 1200,
+        height: 630,
+        alt: "Grandimam - Building Solutions for the Muslim Community",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Grandimam",
     description:
       "I identify what needs to be done and get it done. Building meaningful solutions for problems that matter to the Muslim community.",
     creator: "@thegrandimam",
+    images: ["/favicon.png"],
   },
   robots: {
     index: true,
