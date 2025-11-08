@@ -32,7 +32,7 @@ export default function AboutPage() {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
       }}
     >
-      <Header breadcrumb="about" />
+      <Header breadcrumb="about" currentPage="about" />
 
       <div style={{ display: "flex", gap: "24px" }}>
         <Sidebar currentPage="about" />

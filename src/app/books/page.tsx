@@ -130,7 +130,7 @@ export default function BooksPage() {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
       }}
     >
-      <Header breadcrumb="books" />
+      <Header breadcrumb="books" currentPage="books" />
       
       <div style={{ display: 'flex', gap: '24px' }}>
         <Sidebar currentPage="books" />

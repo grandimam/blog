@@ -27,7 +27,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
       }}
     >
-      <Header />
+      <Header currentPage="posts" />
       <div style={{ display: "flex", gap: "24px" }}>
         <Sidebar currentPage="posts" />
         <main className="mobile-main" style={{ flex: 1 }}>

@@ -81,6 +81,11 @@ a:focus {
   .toc-desktop {
     display: none !important;
   }
+  
+  /* Show mobile navigation on mobile */
+  .mobile-nav {
+    display: block !important;
+  }
 }
 
 /* Desktop styles */
