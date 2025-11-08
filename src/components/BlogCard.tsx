@@ -23,8 +23,8 @@ export function BlogCard({ post, index }: BlogCardProps) {
     }}>
       <span style={{ 
         color: '#828282', 
-        fontSize: '14px',
-        minWidth: '20px',
+        fontSize: '16px',
+        minWidth: '24px',
         textAlign: 'right',
         lineHeight: '1.4',
         userSelect: 'none'
@@ -38,9 +38,9 @@ export function BlogCard({ post, index }: BlogCardProps) {
           style={{ 
             color: '#000', 
             textDecoration: 'none',
-            fontSize: '14px',
+            fontSize: '16px',
             fontWeight: '500',
-            lineHeight: '1.4',
+            lineHeight: '1.5',
             display: 'block',
             padding: '8px 0',
             cursor: 'pointer',
@@ -53,10 +53,10 @@ export function BlogCard({ post, index }: BlogCardProps) {
         </a>
         
         <div style={{ 
-          fontSize: '12px', 
+          fontSize: '14px', 
           color: '#828282',
           marginTop: '-8px',
-          lineHeight: '1.3',
+          lineHeight: '1.4',
           userSelect: 'none'
         }}>
           {formatDate(post.date)} | {post.readingTime} min read

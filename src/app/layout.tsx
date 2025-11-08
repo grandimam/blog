@@ -9,9 +9,36 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Grandimam's Blog - Data Intelligence & AI",
-  description: "Insights on building data-intelligence platforms, AI integration, and scalable systems.",
-  keywords: ["data intelligence", "AI", "machine learning", "data pipelines", "APIs"],
+  title: "Grandimam - Data Intelligence & AI Engineer",
+  description: "Building data-intelligence platforms that fetch messy data, enrich it with AI/LLMs, and expose insights via scalable APIs. Expert in data pipelines, machine learning, and intelligent systems.",
+  keywords: ["data intelligence", "AI engineer", "machine learning", "data pipelines", "APIs", "LLM integration", "data platforms", "AI systems"],
+  authors: [{ name: "Grandimam" }],
+  creator: "Grandimam",
+  openGraph: {
+    title: "Grandimam - Data Intelligence & AI Engineer",
+    description: "Building data-intelligence platforms that fetch messy data, enrich it with AI/LLMs, and expose insights via scalable APIs.",
+    url: "https://grandimam.dev",
+    siteName: "Grandimam",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Grandimam - Data Intelligence & AI Engineer", 
+    description: "Building data-intelligence platforms that fetch messy data, enrich it with AI/LLMs, and expose insights via scalable APIs.",
+    creator: "@grandimam",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

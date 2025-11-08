@@ -40,9 +40,19 @@ a:focus {
     -webkit-touch-callout: none;
   }
   
-  /* Improve mobile spacing */
+  /* Hide sidebar on mobile */
+  .mobile-sidebar {
+    display: none !important;
+  }
+  
+  /* Mobile container adjustments */
   .mobile-container {
-    padding: 16px 20px !important;
+    padding: 12px 16px !important;
+  }
+  
+  /* Mobile main content - full width without sidebar */
+  .mobile-main {
+    width: 100% !important;
   }
   
   /* Better mobile text selection - only for content, not UI elements */
@@ -65,5 +75,17 @@ a:focus {
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hide TOC on mobile */
+  .toc-desktop {
+    display: none !important;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .toc-desktop {
+    display: block !important;
   }
 }
