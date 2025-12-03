@@ -1,0 +1,78 @@
+# Site settings
+title: Grandimam
+description: I identify what needs to be done and get it done. Building meaningful solutions for problems that matter to the Muslim community using JavaScript, Express, and modern web technologies.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://grandimam.net" # the base hostname & protocol for your site
+
+# Author
+author:
+  name: Grandimam
+  twitter: thegrandimam
+
+# SEO and meta tags
+tagline: Building Solutions for the Muslim Community
+keywords:
+  - muslim community
+  - javascript developer
+  - express
+  - web development
+  - community solutions
+  - collective security
+  - institutional responsibility
+  - purposeful technology
+
+# Social
+social:
+  twitter: thegrandimam
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:slug/
+paginate: 3
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Navigation
+navigation:
+  - title: posts
+    url: /
+  - title: books
+    url: /books
+  - title: about
+    url: /about
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
