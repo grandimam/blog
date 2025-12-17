@@ -1,11 +1,24 @@
 <div style="
-  padding: 16px;
-  margin: 16px 0;
+  padding: 20px;
+  margin: 24px 0;
   border-left: 4px solid {% if include.type == 'warning' %}#ff9800{% elsif include.type == 'error' %}#f44336{% elsif include.type == 'success' %}#4caf50{% else %}#2196f3{% endif %};
   background-color: {% if include.type == 'warning' %}#fff3e0{% elsif include.type == 'error' %}#ffebee{% elsif include.type == 'success' %}#e8f5e9{% else %}#e3f2fd{% endif %};
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 ">
   {% if include.title %}
-  <h4 style="margin-top: 0; margin-bottom: 8px;">{{ include.title }}</h4>
+  <h4 style="
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: {% if include.type == 'warning' %}#e65100{% elsif include.type == 'error' %}#c62828{% elsif include.type == 'success' %}#2e7d32{% else %}#1565c0{% endif %};
+  ">{{ include.title }}</h4>
   {% endif %}
-  <p style="margin: 0;">{{ include.content }}</p>
+  <div style="
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+  ">{{ include.content }}</div>
 </div>
